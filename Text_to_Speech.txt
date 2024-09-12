@@ -1,0 +1,6 @@
+import pyttsx3
+engine=pyttsx3.init()
+text="python is a great programming language"
+engine.say(text)
+engine.runAndWait()
+print("done")

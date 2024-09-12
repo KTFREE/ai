@@ -1,0 +1,22 @@
+male(ram).
+male(ajay).
+male(ravi).
+male(joy).
+
+female(geeta).
+female(priya).
+female(nisha).
+female(jony).
+
+parent(ram, geeta, ajay).
+parent(ram, geeta, nisha).
+parent(ajay,priya,joy).
+parent(ravi, nisha,jony).
+
+father(X, Y):- parent(X,Z,Y). %parent(X,_Z,Y)
+mother(X, Y):- parent(Z,X,Y).
+
+grandfather(X, Y):-
+    male(X), father(X,Z), father(Z,Y).
+grandmother(X, Y):-
+    female(X), mother(X,Z), father(Z,Y).

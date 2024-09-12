@@ -1,0 +1,19 @@
+graph={
+    'A':['B','C'],
+    'B':['D','E'],
+    'C':['F','G'],
+    'D':[],
+    'E':[],
+    'F':[],
+    'G':[],
+    }
+v=[]
+q=['A']
+while (len(q)!=0):
+    s=q.pop(0)
+    if s not in v:
+        v.append(s)
+    for n1 in graph[s]:
+        q.append(n1)
+print(v)
+

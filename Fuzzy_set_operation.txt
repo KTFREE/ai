@@ -1,0 +1,65 @@
+elt=['w','x','y','z']
+A=[0.1,0.4,0.9,0.3]
+B=[0.2,0.8,0.6,0.7]
+def printset(m):
+    for i in range(0,4):
+        print('(',elt[i],',',m[i],')',end=',')
+    print()
+print("set A=")
+printset(A)
+print("set B=")
+printset(B)
+
+#union
+u=[]
+for i in range(0,4):
+    if A[i]>B[i]:
+        u.append(A[i])
+    else:
+        u.append(B[i])
+print("Union of A and B = ")
+printset(u)
+
+#intersection
+I=[]
+for i in range(0,4):
+    if A[i]<B[i]:
+        I.append(A[i])
+    else:
+        I.append(B[i])
+print("Intersection of A and B= ")
+printset(I)
+
+#A complement
+AC=[]
+for i in range(0,4):
+    AC.append(1-A[i])
+print("A complement= ")
+printset(AC)
+
+#B complement
+BC=[]
+for i in range(0,4):
+    BC.append(1-B[i])
+print("B complement= ")
+printset(BC)
+
+#A-B
+AMB=[]
+for i in range(0,4):
+    if A[i]<BC[i]:
+        AMB.append(A[i])
+    else:
+        AMB.append(BC[i])
+print("A-B = ")
+printset(AMB)
+
+#B-A 
+BMA=[]
+for i in range(0,4):
+    if B[i]<AC[i]:
+        BMA.append(B[i])
+    else:
+        BMA.append(AC[i])
+print("B-A = ")
+printset(BMA)

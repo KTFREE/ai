@@ -1,0 +1,12 @@
+pofA = float(input("Enter number of C programmers in percentage: "))
+pofAandB = float(input("Enter number of C and Java programmers in percentage: "))
+pofA = pofA / 100
+pofAandB = pofAandB / 100
+print("Event A that students is Java Programmer =", pofAandB)
+print("Event A that students is C Programmer =", pofA)
+print("Event A and B that students knowing both C and Java is =", pofAandB)
+print("Let's calculate P(B|A):")
+print("P(B|A) = P(A and B) / P(A)")
+pBgivenA = pofAandB / pofA
+print("P(B|A) = ", pBgivenA)
+print("There are", pBgivenA * 100, "% chances that the student that knows C also knows Java")

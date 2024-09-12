@@ -1,0 +1,22 @@
+<aiml version="1.0.1" encoding="UTF-8">
+    <category>
+        <pattern>HELLO I AM *</pattern>
+        <template>Hello <set name="name"><star/></set></template>
+    </category>
+    <category>
+        <pattern>I LIKE * COLOUR</pattern>
+        <template><star index="1"/> is a nice color</template>
+    </category>
+    <category>
+        <pattern>HOW ARE YOU</pattern>
+        <template>I am fine</template>
+    </category>
+    <category>
+        <pattern>WHAT IS YOUR AGE</pattern>
+        <template>20</template>
+    </category>
+    <category>
+        <pattern>BYE</pattern>
+        <template>Bye!!<get name="name"/> Thanks for the Conversation</template>
+    </category>
+</aiml>

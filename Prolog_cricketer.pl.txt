@@ -1,0 +1,3 @@
+cricketer(X):- batsman(X).
+batsman(sachin).
+
