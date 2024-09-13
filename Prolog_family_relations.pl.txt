@@ -19,4 +19,4 @@ mother(X, Y):- parent(Z,X,Y).
 grandfather(X, Y):-
     male(X), father(X,Z), father(Z,Y).
 grandmother(X, Y):-
-    female(X), mother(X,Z), father(Z,Y).
+    female(X), mother(X,Z), mother(Z,Y).
